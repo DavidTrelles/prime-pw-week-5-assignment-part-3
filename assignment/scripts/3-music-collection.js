@@ -28,3 +28,16 @@ console.log("Faith", addToCollection("Faith", "George Michael", 1987))
 console.log("Whitney", addToCollection("Whitney", "Whitney Houston", 1987))
 console.log(`This is the record collection`, collection)
 
+// - Add a function named `showCollection`. This function should:
+//   - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
+//   - Console.log the number of items in the array.
+//   - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
+function showCollection (arr) {
+    console.log(arr.length);
+    for (let i =0; i<arr.length; i++) {
+        console.log(`${arr[i].title} by ${arr[i].artist}, published in ${arr[i].yearPublished}.`)
+
+    }
+}
+
+showCollection(collection);

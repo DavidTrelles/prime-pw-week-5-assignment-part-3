@@ -39,5 +39,23 @@ function showCollection (arr) {
 
     }
 }
-
+// - Test the `showCollection` function.
 showCollection(collection);
+
+// - Add a function named `findByArtist`. This function should:
+//   - Take in `artist` (a string) parameter
+//   - Create an array to hold any results, empty to start
+//   - Loop through the `collection` and add any objects with a matching artist to the array.
+//   - Return the array with the matching results. If no results are found, return an empty array.
+
+function findByArtist (str) {
+    let results = [];
+    for (let i=0; i<collection.length;i++){
+        if (str === collection[i].artist){
+            results.push(collection[i]);
+        }
+    } return results
+}
+
+console.log(findByArtist("Wham!"))
+

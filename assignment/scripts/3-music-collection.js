@@ -115,7 +115,12 @@ function nAddToCollection(title, artist, yearPublished, tracks){
 }
 //test
 let arr = [	"Wake Me Up Before You Go-Go : 3:50", "Everything She Wants : 5:01", "Heartbeat : 4:42"]
+let arr2 = ["If You Were There : 3:43", "I'm Your Man 4:06", "Everything She Wants : 5:01"]
+let arr3 =["Material Girl : 4:01", "Angel : 3:56", "Like a Virgin : 3:38"]
+
 console.log("Make It Big", nAddToCollection("Make it Big", "Wham!", 1984, arr))
+console.log("If you were there", nAddToCollection("The Best of Wham!: If You Were There...","Wham!", 1997, arr2 ))
+console.log("like a Virgin", nAddToCollection("Like a Virgin", "Madonna", 1984, arr3))
 
 //testing
 console.log(newCollection[0].tracks[1])

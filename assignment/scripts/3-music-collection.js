@@ -57,5 +57,41 @@ function findByArtist (str) {
     } return results
 }
 
-console.log(findByArtist("Wham!"))
 
+// - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. 
+// Check that for artists with multiple matches, all are found.
+console.log(findByArtist("dudezaplenti"))
+console.log(findByArtist("Wham!"))
+console.log(findByArtist("Bryan Adams"))
+
+// Create a function called `search`. This function should:
+//   - Take an input parameter for a search criteria object. 
+//   Create your solution based on a search object that has these properties:
+//   ```
+//   { artist: 'Ray Charles', year: 1957 }
+//   ```
+//   - The returned output from `search` should meet these requirements:
+//     - Return a new array of all items in the `collection` matching *all* of the 
+//     search criteria.
+//     - If no results are found, return an empty array.
+//     - If there is no search object or an empty search object provided as input, 
+//     then return all albums in the `collection`.
+function search(obj) { 
+    let newArr = [];
+    if(obj === undefined || Object.entries(obj).length === 0) {
+        return collection}
+        else {
+    for (let i = 0; i < collection.length; i++){
+        if (collection[i].artist === obj.artist && collection[i].yearPublished === obj.year){
+            newArr.push(collection[i].title)
+        }
+    } return newArr
+  }
+}
+//testing
+console.log(search({artist: "David", year: 1997}))
+console.log(search())
+console.log(search({}))
+console.log(search({artist: "Wham!", year:1984}))
+
+//success

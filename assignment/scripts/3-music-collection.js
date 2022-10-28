@@ -95,3 +95,49 @@ console.log(search({}))
 console.log(search({artist: "Wham!", year:1984}))
 
 //success
+
+// - Add an array of `tracks` to your album objects. 
+// Each track should have a `name` and `duration`. 
+// You will need to update the functions to support this new property:
+//   - Update the `addToCollection` function to also take an input parameter 
+//   for the array of tracks.
+let newCollection = []
+
+function nAddToCollection(title, artist, yearPublished, tracks){
+    let newObj ={
+        "title": title,
+        "artist": artist,
+        "yearPublished": yearPublished,
+        "tracks": tracks
+    }
+    newCollection.push(newObj)
+    return newObj;
+}
+//test
+let arr = [	"Wake Me Up Before You Go-Go : 3:50", "Everything She Wants : 5:01", "Heartbeat : 4:42"]
+console.log("Make It Big", nAddToCollection("Make it Big", "Wham!", 1984, arr))
+
+//   - Update `search` to allow a `trackName` search criteria.
+function nShowCollection (arr) {
+    console.log(arr.length);
+    for (let i =0; i<arr.length; i++) {
+        console.log(`${arr[i].title} by ${arr[i].artist}, published in ${arr[i].yearPublished}\n1. ${arr[i].tracks[0]}\n2. ${arr[i].tracks[1]}\n3. ${arr[i].tracks[2]}.`)
+
+    }
+}
+
+nShowCollection(newCollection)
+//   - Update the `showCollection` function to display the list of tracks 
+//   for each album with its name and duration.
+// ```
+//     TITLE by ARTIST, published in YEAR:
+//     1. NAME: DURATION
+//     2. NAME: DURATION
+//     3. NAME: DURATION
+//     TITLE by ARTIST, published in YEAR:
+//     1. NAME: DURATION
+//     2. NAME: DURATION
+// ```
+
+// > Make sure to test all your code!
+
